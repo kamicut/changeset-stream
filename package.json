@@ -1,0 +1,21 @@
+{
+  "name": "changeset-stream",
+  "version": "0.0.1",
+  "description": "The OSM Changeset stream, using Kefir streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "osm",
+    "openstreetmap"
+  ],
+  "author": "Marc Farra",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "kefir": "^2.8.1",
+    "node-expat": "^2.3.9",
+    "ramda": "^0.17.1",
+    "request-promise": "^0.4.3"
+  }
+}
