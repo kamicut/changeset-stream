@@ -60,14 +60,19 @@ function MetaParser (xmlData) {
   });
 }
 
+/* Maps a state text file to a state number
+ * String -> Number
+ */
+function getState (stateTextFile) {
+  return Number(stateTextFile.substr(stateTextFile.length - 8));
+}
+
 // State property
 var state = K.fromPoll(5000, function () {
     return K.fromPromise(request(state_url));
   })
   .flatMap()
-  .map(function (text) {
-    return Number(text.substr(text.length - 8));
-  })
+  .map(getState)
   .skipDuplicates()
   .toProperty(R.always(0));
 
